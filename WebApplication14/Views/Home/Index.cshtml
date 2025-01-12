@@ -1,0 +1,167 @@
+﻿<div class="introduction">
+    <h1 style="text-align: center;">Best Platform for Blogging Website</h1>
+    <img src="blockchain-3330531_960_720.jpg" alt="">
+    <p>
+        "Explore the world of cryptocurrency with us! Learn how to mine crypto, stay updated with the latest trends,
+        and discover tips to maximize your profits. Join our community and start your crypto journey today!"
+    </p>
+</div>
+
+<h2>Blogs</h2>
+<button class="add-blog-btn" id="add-blog-btn">Add Blog</button>
+
+<div class="form-container" id="blog-form-container" style="display: none;">
+    <h3>Add Your Blog</h3>
+    <form id="blog-form">
+        <input type="text" id="blog-name" placeholder="Blog Name" required>
+        <input type="text" id="blog-title" placeholder="Blog Title" required>
+        <textarea id="blog-content" placeholder="Blog Content" rows="5" required></textarea>
+        <input type="file" id="blog-image" accept="image/*">
+        <button type="submit">Submit Blog</button>
+    </form>
+</div>
+
+<div id="blog-section"></div>
+
+<script>
+    document.getElementById('add-blog-btn').addEventListener('click', () => {
+        const blogFormContainer = document.getElementById('blog-form-container');
+        blogFormContainer.style.display = blogFormContainer.style.display === 'none' ? 'block' : 'none';
+    });
+
+    document.getElementById('blog-form').addEventListener('submit', function (event) {
+        event.preventDefault();
+
+        const blogName = document.getElementById('blog-name').value;
+        const blogTitle = document.getElementById('blog-title').value;
+        const blogContent = document.getElementById('blog-content').value;
+        const blogImage = document.getElementById('blog-image').files[0];
+
+        const blogCard = document.createElement('div');
+        blogCard.classList.add('blog-card');
+
+        const imageUrl = blogImage ? URL.createObjectURL(blogImage) : '';
+        blogCard.innerHTML = `
+            <img src="${imageUrl}" alt="Blog Image">
+            <h4>${blogName}</h4>
+            <p>${blogTitle}</p>
+            <button class="delete-btn">Delete</button>
+        `;
+
+        blogCard.querySelector('.delete-btn').addEventListener('click', function () {
+            blogCard.remove();
+        });
+
+        document.getElementById('blog-section').appendChild(blogCard);
+
+        document.getElementById('blog-form').reset();
+        document.getElementById('blog-form-container').style.display = 'none';
+    });
+</script>
+
+
+
+<!-- See More button -->
+<button class="see-more-btn" id="see-more-btn">See More</button>
+
+<!-- More cards container, initially hidden -->
+<div id="more-cards-container">
+    <div class="blog-section">
+        <!-- Placeholder for 12 cards -->
+        <!-- Repeat this block 12 times for your default cards -->
+        <div class="default-card" onclick="window.location.href='blog1.html'">
+            <img src="block-chain-5481618_1920.jpg" alt="Card Image">
+            <div class="blog-name">Crypto Mining</div>
+            <h4>Blog Title 1</h4>
+            <p>Blog content preview...</p>
+        </div>
+        <div class="default-card" onclick="window.location.href='blog2.html'">
+            <img src="blockchain-3330531_960_720.jpg" alt="Card Image">
+            <div class="blog-name">Blockchain Basics</div>
+            <h4>Blog Title 2</h4>
+            <p>Blog content preview...</p>
+        </div>
+        <div class="default-card" onclick="window.location.href='blog3.html'">
+            <img src="bitcoin-3012035_1280.png" alt="Card Image">
+            <div class="blog-name">Meme Coins</div>
+            <h4>Blog Title 3</h4>
+            <p>Blog content preview...</p>
+        </div>
+        <div class="default-card" onclick="window.location.href='blog4.html'">
+            <img src="bitcoin-2714191_1920.jpg" alt="Card Image">
+            <div class="blog-name">Future of Crypto</div>
+            <h4>Blog Title 4</h4>
+            <p>Blog content preview...</p>
+        </div>
+        <!-- Add more cards as needed -->
+        <div class="default-card" onclick="window.location.href='blog1.html'">
+            <img src="bitcoin-7678812_1920.jpg" alt="Card Image">
+            <div class="blog-name">Crypto Mining</div>
+            <h4>Blog Title 1</h4>
+            <p>Blog content preview...</p>
+        </div>
+        <div class="default-card" onclick="window.location.href='blog2.html'">
+            <img src="image-3375235_1920.png" alt="Card Image">
+            <div class="blog-name">Blockchain Basics</div>
+            <h4>Blog Title 2</h4>
+            <p>Blog content preview...</p>
+        </div>
+        <div class="default-card" onclick="window.location.href='blog3.html'">
+            <img src="bitcoin-2714192_1920.jpg" alt="Card Image">
+            <div class="blog-name">Meme Coins</div>
+            <h4>Blog Title 3</h4>
+            <p>Blog content preview...</p>
+        </div>
+        <div class="default-card" onclick="window.location.href='blog4.html'">
+            <img src="coins-5774946_1920.jpg" alt="Card Image">
+            <div class="blog-name">Future of Crypto</div>
+            <h4>Blog Title 4</h4>
+            <p>Blog content preview...</p>
+        </div>
+    </div>
+</div>
+
+<script>
+    // Show more or less cards on button click
+    const seeMoreBtn = document.getElementById('see-more-btn');
+    const moreCardsContainer = document.getElementById('more-cards-container');
+
+    seeMoreBtn.addEventListener('click', function () {
+        if (moreCardsContainer.style.display === 'block') {
+            moreCardsContainer.style.opacity = 0; // Fade out the cards
+            setTimeout(function () {
+                moreCardsContainer.style.display = 'none'; // Hide the cards after fade-out
+            }, 500); // Match the fade-out transition duration
+            seeMoreBtn.textContent = 'See More'; // Change button text to 'See More'
+        } else {
+            moreCardsContainer.style.display = 'block'; // Show the cards
+            setTimeout(function () {
+                moreCardsContainer.style.opacity = 1; // Fade in the cards
+            }, 10); // Slight delay to trigger the transition
+            seeMoreBtn.textContent = 'See Less'; // Change button text to 'See Less'
+
+            // Scroll to the newly revealed content
+            window.scrollTo({
+                top: moreCardsContainer.offsetTop,
+                behavior: 'smooth'
+            });
+        }
+    });
+</script>
+
+<div class="Comment_box">
+    <h2>User Comments</h2>
+    <summary>
+        <div class="comment">
+            <h3>John Doe</h3>
+            <p>I absolutely love the way your website simplifies cryptocurrency concepts for beginners like me. The step-by-step guides on mining methods are incredibly detailed and easy to follow. I’ve learned more in a few hours here than I have from weeks of research elsewhere. Thank you for creating such a valuable resource for the crypto community!</p>
+        </div>
+        <div class="comment">
+            <h3>Jane Smith</h3>
+            <p>Your blogs are a game-changer! The daily updates on cryptocurrency trends and the future role of crypto are super insightful. I recently followed your tips on mining techniques, and I've already seen noticeable results. Your site has become my go-to place for everything crypto-related. Keep up the fantastic work!</p>
+        </div>
+        <div class="comment" style="border: none;">
+            <h3>Ali Khan</h3>
+            <p>This website is a treasure trove for anyone interested in cryptocurrency. The way you explain complex topics, like meme coins and major coins, makes it accessible to everyone. I also appreciate the real-world examples and practical advice on profiting from crypto mining. Your passion for educating the community truly shines through every blog post!</p>
+        </div>
+</div>

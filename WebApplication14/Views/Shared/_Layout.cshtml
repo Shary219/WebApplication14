@@ -1,0 +1,108 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>@ViewData["Title"] - WebApplication14</title>
+    <script type="importmap"></script>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/WebApplication14.styles.css" asp-append-version="true" />
+</head>
+<body>
+    <header>
+
+        <div class="header">
+            <nav>
+                <ul class="logo">EYM</ul>
+                <ul class="nav-line">
+                    <li class="ad">Home</li>
+
+                    <li class="ad">About Us</li>
+                    <li class="ad">Contact Us</li>
+                    <li>
+                        <button style="color: black;" class="search-icon" type="button" id="searchButton">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </li>
+                </ul>
+                <ul>
+
+                    <button id="subscribe-btn">
+                        <a style="color: white; text-decoration: none;" href="@Url.Action("Privacy", "Home")">
+                            Subscribe for More Updates
+                        </a>
+                    </button>
+
+                    @* <button id="subscribe-btn"> *@
+                    @*     <a style="color: white; text-decoration: none;" href="/Privacy">Subscribe for More Updates</a> *@
+                    @* </button> *@
+
+                    @* <button id="subscribe-btn"> *@
+                    @*     <a style="color: white; text-decoration: none;" href="/Home/Privacy.cshtml">Subscribe for More Updates</a> *@
+                    @* </button> *@
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <div class="container">
+        <main role="main" class="pb-3">
+            @RenderBody()
+        </main>
+    </div>
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-about">
+                <h3>About Us</h3>
+                <p style="color: white;">
+                    Your one-stop platform for daily updates and valuable insights on cryptocurrency, mining, and more.
+                    Stay connected with the world of crypto!
+                </p>
+            </div>
+
+            <div class="footer-links">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="/about.html">About</a></li>
+                    <li><a href="/blogs.html">Blogs</a></li>
+                    <li><a href="/mining.html">Mining Guide</a></li>
+                    <li><a href="/contact.html">Contact</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-social">
+                <h3>Follow Us</h3>
+                <div class="social-icons">
+                    <a href="https://facebook.com" target="_blank">
+                        <i class="fab">
+                            <i class="fa fa-facebook-f" style="font-size:36px"></i>
+                        </i>
+                    </a>
+                    <a href="https://twitter.com" target="_blank">
+                        <i class="fab ">
+                            <i class="fa fa-twitter" style="font-size:36px"></i>
+                        </i>
+                    </a>
+                    <a href="https://instagram.com" target="_blank">
+                        <i class="fab ">
+                            <i class="fa fa-instagram" style="font-size:36px"></i>
+                        </i>
+                    </a>
+                    <a href="https://linkedin.com" target="_blank">
+                        <i class="fab">
+                            <i class="fa fa-linkedin-square" style="font-size:36px"></i>
+                        </i>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p style="color: white;">Made By Malik Shaharyar</p>
+        </div>
+    </footer>
+</body>
+</html>
