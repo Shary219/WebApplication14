@@ -1,5 +1,6 @@
 using System.Diagnostics;
 using Microsoft.AspNetCore.Mvc;
+using mysqlproject.Controllers.data;
 using WebApplication14.Models;
 
 namespace WebApplication14.Controllers
@@ -7,10 +8,18 @@ namespace WebApplication14.Controllers
     public class HomeController : Controller
     {
         private readonly ILogger<HomeController> _logger;
+        //private readonly IActionResult _result;
+        //private readonly AddDbContext result;
+
+        //private readonly AddDbContext _Contact;
 
         public HomeController(ILogger<HomeController> logger)
         {
             _logger = logger;
+            //_login = login; 
+            //_Contact = Contact;
+            
+
         }
 
         public IActionResult Index()
