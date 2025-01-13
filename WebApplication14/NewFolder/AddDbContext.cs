@@ -11,7 +11,8 @@ namespace mysqlproject.Controllers.data
 
         // Replace 'YourEntity' with the name of your actual entity class.
         public DbSet<Contact> Contacts { get; set; }
-        public object Contact { get; internal set; }
+        public DbSet<e> email { get; set; }
+        //public object Contact { get; internal set; }
     }
 
     // Example of an entity class (replace with your actual entity class definition)
