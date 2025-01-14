@@ -7,6 +7,7 @@ namespace WebApplication14.Models
         [Key]
         public string email { get; set; }
         [Required]
+        //[Key]
         public string name { get; set; }
         [Required]
         public string subject { get; set; }

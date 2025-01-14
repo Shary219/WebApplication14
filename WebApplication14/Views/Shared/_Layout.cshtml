@@ -13,14 +13,12 @@
 </head>
 <body>
     <header>
-
         <div class="header">
             <nav>
                 <ul class="logo">EYM</ul>
                 <ul class="nav-line">
-                    <li class="ad">Home</li>
-
-                    <li class="ad">About Us</li>
+                    <li class="ad"> <a style="color:black;text-decoration:none" href="@Url.Action("Index", "Home")">Home</a></li>
+                    <li id="aboutus" class="ad" style="cursor: pointer;">About Us</li>
                     <li class="ad"> <a style="color: black; text-decoration: none;" href="@Url.Action("Contact", "Home")">Contact Us</a>  </li>
                     <li>
                         <button style="color: black;" class="search-icon" type="button" id="searchButton">
@@ -29,20 +27,11 @@
                     </li>
                 </ul>
                 <ul>
-
                     <button id="subscribe-btn">
                         <a style="color: white; text-decoration: none;" href="@Url.Action("Privacy", "Home")">
                             Subscribe for More Updates
                         </a>
                     </button>
-
-                    @* <button id="subscribe-btn"> *@
-                    @*     <a style="color: white; text-decoration: none;" href="/Privacy">Subscribe for More Updates</a> *@
-                    @* </button> *@
-
-                    @* <button id="subscribe-btn"> *@
-                    @*     <a style="color: white; text-decoration: none;" href="/Home/Privacy.cshtml">Subscribe for More Updates</a> *@
-                    @* </button> *@
                 </ul>
             </nav>
         </div>
@@ -53,7 +42,7 @@
         </main>
     </div>
 
-    <footer>
+    <footer id="footer">
         <div class="footer-container">
             <div class="footer-about">
                 <h3>About Us</h3>
@@ -104,5 +93,13 @@
             <p style="color: white;">Made By Malik Shaharyar</p>
         </div>
     </footer>
+
+    <script>
+        // JavaScript to scroll to the footer when "About Us" is clicked
+        document.getElementById('aboutus').addEventListener('click', function () {
+            const footer = document.getElementById('footer');
+            footer.scrollIntoView({ behavior: 'smooth' });
+        });
+    </script>
 </body>
 </html>

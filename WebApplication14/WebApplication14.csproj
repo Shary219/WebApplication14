@@ -7,6 +7,15 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Include="wwwroot\NewFolder1\bitcoin-2714191_1920.jpg" />
+    <None Include="wwwroot\NewFolder1\bitcoin-2714192_1920.jpg" />
+    <None Include="wwwroot\NewFolder1\bitcoin-3012035_1280.png" />
+    <None Include="wwwroot\NewFolder1\bitcoin-7678812_1920.jpg" />
+    <None Include="wwwroot\NewFolder1\block-chain-5481618_1920.jpg" />
+    <None Include="wwwroot\NewFolder1\blockchain-3330531_960_720.jpg" />
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="fm.EntityFrameworkCore.SqlServer" Version="5.0.0" />
     <PackageReference Include="Microsoft.EntityFrameworkCore" Version="9.0.0" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="9.0.0" />
